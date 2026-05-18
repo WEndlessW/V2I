@@ -9,56 +9,69 @@
 <body>
 
 <header>
-    <h1>Kontaktní formulář</h1>
+    <div class="container">
+        <h1>Kontaktní formulář</h1>
+        <p>Ukázka různých input polí</p>
+    </div>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="characters.html">Postavy</a></li>
-    </ul>
+    <div class="container">
+        <ul>
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="characters.html">Postavy</a></li>
+        </ul>
+    </div>
 </nav>
 
-<main>
+<main class="container">
+
+<section class="card">
 
 <h2>Vyplň formulář</h2>
 
 <form>
 
-    <label>Jméno:</label><br>
-    <input type="text" name="jmeno"><br><br>
+    <label for="jmeno">Jméno</label>
+    <input type="text" id="jmeno" name="jmeno" placeholder="Zadej jméno">
 
-    <label>Email:</label><br>
-    <input type="email" name="email"><br><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Zadej email">
 
-    <label>Věk:</label><br>
-    <input type="number" name="vek"><br><br>
+    <label for="vek">Věk</label>
+    <input type="number" id="vek" name="vek">
 
-    <label>Datum narození:</label><br>
-    <input type="date" name="datum"><br><br>
+    <label for="datum">Datum narození</label>
+    <input type="date" id="datum" name="datum">
 
-    <label>Oblíbený žánr:</label><br>
-    <select>
+    <label for="zanr">Oblíbený žánr</label>
+    <select id="zanr">
         <option>Akce</option>
         <option>Fantasy</option>
         <option>Komedie</option>
-    </select><br><br>
+        <option>Sci-fi</option>
+    </select>
 
-    <label>Oblíbené anime:</label><br>
-    <textarea rows="5" cols="30"></textarea><br><br>
+    <label for="anime">Oblíbené anime</label>
+    <textarea id="anime" rows="5" placeholder="Napiš své oblíbené anime"></textarea>
 
-    <label>
-        <input type="checkbox"> Souhlasím s podmínkami
-    </label><br><br>
+    <div class="checkbox">
+        <input type="checkbox" id="souhlas">
+        <label for="souhlas">Souhlasím s podmínkami</label>
+    </div>
 
     <input type="submit" value="Odeslat">
 
 </form>
 
+</section>
+
 </main>
 
 <footer>
-    <p>Anime World formulář</p>
+    <div class="container">
+        <p>Anime World | Formulář</p>
+    </div>
 </footer>
 
 </body>
