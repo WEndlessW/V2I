@@ -14,7 +14,7 @@ Všechny stránky používají ten stejný stylesheet: `styles.css`.
 
 - Hlavička a patička na každé stránce
 - Navigační menu které linkuje všechny tři stránky a poté také na externí stránku (Crunchyroll)
-- Nadpisy: `h1`, `h2`, and `h3`
+- Nadpisy: `h1`, `h2`, a `h3`
 - Obrázek
 - Tabulku
 - Formulář s různými typy inputů
