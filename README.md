@@ -29,6 +29,9 @@ Všechny stránky používají ten stejný stylesheet: `styles.css`.
 ├── styles.css
 └── README.md
 ```
+##Odkaz na stránku
+
+[Stránka zde](https://wendlessw.github.io/V2I/)
 
 ## Autor
 
