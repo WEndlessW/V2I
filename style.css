@@ -1,76 +1,59 @@
 * {
-}
-
-h2 {
-    margin-bottom: 15px;
-    color: #4fc3f7;
-}
-
-h3 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-ul, ol {
-    margin-left: 20px;
-}
-
-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    display: block;
-    margin: 20px auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-table {
     width: 100%;
     border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 10px;
+    min-width: 500px;
 }
 
 th {
-    background-color: #4fc3f7;
+    background-color: #38bdf8;
     color: black;
 }
 
 th, td {
     padding: 15px;
     text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 tr:nth-child(even) {
-    background-color: rgba(255,255,255,0.1);
-}
-
-tr:nth-child(odd) {
     background-color: rgba(255,255,255,0.05);
 }
 
 form {
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox input {
+    width: auto;
 }
 
 input[type="submit"] {
-    background-color: #4fc3f7;
+    background-color: #38bdf8;
     color: black;
     font-weight: bold;
     cursor: pointer;
@@ -78,13 +61,29 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #81d4fa;
+    background-color: #7dd3fc;
 }
 
 footer {
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #38bdf8;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background: rgba(0,0,0,0.5);
-    border-top: 2px solid #4fc3f7;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+
+    .image-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 20px;
+    }
 }
