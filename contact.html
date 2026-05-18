@@ -1,78 +1,178 @@
-<!DOCTYPE html>
-<html lang="cs">
+
+Action: file_editor create /app/contact.html --file-text "<!DOCTYPE html>
+<html lang=\"en\">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Formulář</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset=\"UTF-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+  <title>Anime World - Contact &amp; Sign Up</title>
+  <link rel=\"stylesheet\" href=\"styles.css\" />
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <h1>Kontaktní formulář</h1>
-        <p>Ukázka různých input polí</p>
-    </div>
-</header>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class=\"logo\">ANIME<span>WORLD</span></div>
+    <nav>
+      <ul>
+        <li><a href=\"index.html\">Home</a></li>
+        <li><a href=\"characters.html\">Characters</a></li>
+        <li><a href=\"contact.html\">Contact</a></li>
+        <li><a href=\"https://www.crunchyroll.com/discover\" target=\"_blank\" rel=\"noopener\" class=\"external\">Crunchyroll &#8599;</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-    <div class="container">
-        <ul>
-            <li><a href="index.html">Domů</a></li>
-            <li><a href="characters.html">Postavy</a></li>
-        </ul>
-    </div>
-</nav>
+  <!-- ===== Main ===== -->
+  <main>
+    <h1>Join the Community</h1>
+    <p>Sign up to receive weekly anime recommendations, news from your favorite studios, and exclusive fan content.</p>
 
-<main class="container">
+    <img
+      class=\"card-img\"
+      src=\"https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&q=80\"
+      alt=\"Anime fan illustration\"
+    />
 
-<section class="card">
+    <h2>Registration Form</h2>
+    <p>Fill in your details below. All fields marked with * are required.</p>
 
-<h2>Vyplň formulář</h2>
+    <form action=\"#\" method=\"post\">
 
-<form>
+      <!-- Username -->
+      <div class=\"form-group\">
+        <label for=\"username\">Username *</label>
+        <input type=\"text\" id=\"username\" name=\"username\" placeholder=\"otaku_master_99\" required />
+      </div>
 
-    <label for="jmeno">Jméno</label>
-    <input type="text" id="jmeno" name="jmeno" placeholder="Zadej jméno">
+      <!-- Email -->
+      <div class=\"form-group\">
+        <label for=\"email\">Email *</label>
+        <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"you@example.com\" required />
+      </div>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Zadej email">
+      <!-- Password -->
+      <div class=\"form-group\">
+        <label for=\"password\">Password *</label>
+        <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Enter a strong password\" minlength=\"6\" required />
+      </div>
 
-    <label for="vek">Věk</label>
-    <input type="number" id="vek" name="vek">
+      <!-- Date of birth -->
+      <div class=\"form-group\">
+        <label for=\"dob\">Date of Birth</label>
+        <input type=\"date\" id=\"dob\" name=\"dob\" />
+      </div>
 
-    <label for="datum">Datum narození</label>
-    <input type="date" id="datum" name="datum">
+      <!-- Phone -->
+      <div class=\"form-group\">
+        <label for=\"phone\">Phone</label>
+        <input type=\"tel\" id=\"phone\" name=\"phone\" placeholder=\"+1 555 123 4567\" />
+      </div>
 
-    <label for="zanr">Oblíbený žánr</label>
-    <select id="zanr">
-        <option>Akce</option>
-        <option>Fantasy</option>
-        <option>Komedie</option>
-        <option>Sci-fi</option>
-    </select>
+      <!-- Website / URL -->
+      <div class=\"form-group\">
+        <label for=\"website\">Favorite anime fansite (URL)</label>
+        <input type=\"url\" id=\"website\" name=\"website\" placeholder=\"https://\" />
+      </div>
 
-    <label for="anime">Oblíbené anime</label>
-    <textarea id="anime" rows="5" placeholder="Napiš své oblíbené anime"></textarea>
+      <!-- Number -->
+      <div class=\"form-group\">
+        <label for=\"watched\">How many anime have you watched?</label>
+        <input type=\"number\" id=\"watched\" name=\"watched\" min=\"0\" max=\"9999\" placeholder=\"42\" />
+      </div>
 
-    <div class="checkbox">
-        <input type="checkbox" id="souhlas">
-        <label for="souhlas">Souhlasím s podmínkami</label>
-    </div>
+      <h3>Preferences</h3>
 
-    <input type="submit" value="Odeslat">
+      <!-- Radio buttons -->
+      <div class=\"form-group\">
+        <label>Favorite type of anime</label>
+        <div class=\"inline-options\">
+          <label><input type=\"radio\" name=\"type\" value=\"series\" checked /> Series</label>
+          <label><input type=\"radio\" name=\"type\" value=\"movie\" /> Movie</label>
+          <label><input type=\"radio\" name=\"type\" value=\"ova\" /> OVA</label>
+        </div>
+      </div>
 
-</form>
+      <!-- Checkboxes -->
+      <div class=\"form-group\">
+        <label>Favorite genres (pick any)</label>
+        <div class=\"inline-options\">
+          <label><input type=\"checkbox\" name=\"genre\" value=\"shonen\" /> Shonen</label>
+          <label><input type=\"checkbox\" name=\"genre\" value=\"seinen\" /> Seinen</label>
+          <label><input type=\"checkbox\" name=\"genre\" value=\"slice\" /> Slice of Life</label>
+          <label><input type=\"checkbox\" name=\"genre\" value=\"mecha\" /> Mecha</label>
+          <label><input type=\"checkbox\" name=\"genre\" value=\"romance\" /> Romance</label>
+          <label><input type=\"checkbox\" name=\"genre\" value=\"horror\" /> Horror</label>
+        </div>
+      </div>
 
-</section>
+      <!-- Select dropdown -->
+      <div class=\"form-group\">
+        <label for=\"studio\">Favorite studio</label>
+        <select id=\"studio\" name=\"studio\">
+          <option value=\"\">-- Select a studio --</option>
+          <option value=\"ghibli\">Studio Ghibli</option>
+          <option value=\"mappa\">MAPPA</option>
+          <option value=\"ufotable\">Ufotable</option>
+          <option value=\"bones\">Bones</option>
+          <option value=\"madhouse\">Madhouse</option>
+          <option value=\"kyoani\">Kyoto Animation</option>
+        </select>
+      </div>
 
-</main>
+      <!-- Range -->
+      <div class=\"form-group\">
+        <label for=\"hours\">How many hours per week do you watch anime? <span style=\"color: var(--accent-3);\">(0 - 40)</span></label>
+        <input type=\"range\" id=\"hours\" name=\"hours\" min=\"0\" max=\"40\" step=\"1\" value=\"10\" />
+      </div>
 
-<footer>
-    <div class="container">
-        <p>Anime World | Formulář</p>
-    </div>
-</footer>
+      <!-- Color picker -->
+      <div class=\"form-group\">
+        <label for=\"color\">Your favorite character's hair color</label>
+        <input type=\"color\" id=\"color\" name=\"color\" value=\"#ff3d8a\" />
+      </div>
+
+      <!-- File upload -->
+      <div class=\"form-group\">
+        <label for=\"avatar\">Upload an avatar</label>
+        <input type=\"file\" id=\"avatar\" name=\"avatar\" accept=\"image/*\" />
+      </div>
+
+      <!-- Textarea -->
+      <div class=\"form-group\">
+        <label for=\"message\">Tell us about your favorite anime moment</label>
+        <textarea id=\"message\" name=\"message\" placeholder=\"Write your story here...\"></textarea>
+      </div>
+
+      <!-- Terms -->
+      <div class=\"form-group\">
+        <label class=\"inline-options\">
+          <input type=\"checkbox\" name=\"terms\" required /> I agree to the terms and conditions *
+        </label>
+      </div>
+
+      <!-- Buttons -->
+      <div class=\"form-group\">
+        <input type=\"submit\" value=\"Sign Up\" />
+        <input type=\"reset\" value=\"Clear\" />
+      </div>
+
+    </form>
+
+    <h2>Other ways to reach us</h2>
+
+    <h3>Email</h3>
+    <p>Drop us a line at <a href=\"mailto:hello@animeworld.fake\">hello@animeworld.fake</a> - we read every message.</p>
+
+    <h3>Community</h3>
+    <p>Join the conversation with thousands of fans on our Discord server and weekly watch parties.</p>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2026 Anime World &middot; Made for fans &middot; <a href=\"index.html\">Home</a> &middot; <a href=\"characters.html\">Characters</a></p>
+  </footer>
 
 </body>
 </html>
+"
+Observation: Create successful: /app/contact.html
